@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'hero'
+    'service'
+    'gallery';
+    background-color: #aaa4a4;
+    margin: 50px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    grid-area: hero;
+    display: grid;
+    grid-template-areas: 
+    'hero hero feature-1'
+    'hero hero feature-2';
+    gap: 5px;
+}
+
+header .hero {
+    grid-area: hero;
+    min-height: 350px;
+    color: white;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+header .hero h2 {
+    font-size: 4em;
+}
+
+header .feature {
+    background-color: black;
+    color: white;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+header .feature h3 {
+    font-size: 2em;
+}
+
+header .feature.feature-1 {
+    grid-area: feature-1;
+}
+
+header .feature.feature-2 {
+    grid-area: feature-2;
+}
+nav {
+    grid-area: header;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    display: grid;
+    grid-template-columns:1fr 2fr ;
+    place-content: center;
+}
+
+nav .logo {
+
+    font-size: 2em;
+    min-width: 200px;
+}
+
+nav ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    align-content: center;
+    text-align: center;
+}
+
+nav ul li {
+    
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover{
+    transform: scale(1.1);
+}
+
+.services {
+    grid-area: service;
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.services .service {
+    padding: 15px;
+    max-height: 200px;
+    background-color: white;
+    border: 1px solid black;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.services .service .icon {  
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    grid-area: gallery;
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery h2 {
+    grid-column: 1/-1;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.gallery .gambar {
+    max-height: 200px;
+    height: 200px;
+    background-color: white;
+}
